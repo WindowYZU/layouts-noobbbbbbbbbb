@@ -5,6 +5,7 @@
  */
 package lendle.courses.wp.layouts;
 
+import com.sun.java.accessibility.util.AWTEventMonitor;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
@@ -49,6 +50,31 @@ public class CardLayoutSample {
         }
         //add ActionListener to each control button and invoke
         //first, previous, next, and last for each button
+        first.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                layout.first(panel);
+            }
+        });
+        prev.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                layout.previous(panel);
+            }
+        });
+        next.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                layout.next(panel);
+            }
+        });
+        last.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                layout.last(panel);
+            }
+        });
+         
         
         //////////////////////////////////////////////////////
 
